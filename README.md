@@ -97,3 +97,7 @@ Fique à vontade para contribuir com melhorias, abrir issues ou fazer pull reque
 ---
 
 Divirta-se jogando e boa sorte!
+
+---
+### Desenvolvido por Letícia Ribeiro
+### Entre em contato comigo - [Linkedin](https://www.linkedin.com/in/leticia-ribeiro-dev-eng/)
