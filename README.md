@@ -87,8 +87,12 @@ Isso abrirá o projeto no navegador. Se não abrir automaticamente, acesse `http
 
 ## Exemplo de Jogo
 
-![Jogo da Forca Screenshot](./public/img-jogo.png)
-![Jogo da Forca Gravação da Tela](./public/gif-jogo.gif)
+## Demonstração do Jogo
+
+## Demonstração do Jogo
+
+<img src="./public/img-jogo.png" alt="Demonstração do Jogo" width="400" />
+<img src="./public/gif-jogo.gif" alt="Demonstração do Jogo" width="400" />
 
 ## Contribuindo
 
@@ -100,4 +104,6 @@ Divirta-se jogando e boa sorte!
 
 ---
 ### Desenvolvido por Letícia Ribeiro
-### Entre em contato comigo - [Linkedin](https://www.linkedin.com/in/leticia-ribeiro-dev-eng/)
+<img src="./public/foto-curriculo.jpeg" alt="Demonstração do Jogo" width="150"/>
+
+#### Entre em contato comigo - [Linkedin](https://www.linkedin.com/in/leticia-ribeiro-dev-eng/)
