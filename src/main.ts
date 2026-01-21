@@ -28,7 +28,7 @@ function renderizarJogo() : void {
 
 	if (tentativas > 0 && tentativas < 6) {
 		indiceImg = tentativas + 1;
-		imgForcaHtml!.src = `${baseUrl}img${indiceImg}.png`;
+		imgForcaHtml!.src = `${baseUrl}/img${indiceImg}.png`;
 	}
 
 	if (!palavraFormatada.includes("_")) {
@@ -41,7 +41,7 @@ function renderizarJogo() : void {
 		tentativasHtml!.textContent = `${tentativas} restantes`;
 	} else if (tentativas <= 0) {
 		tentativasHtml!.innerText = `Não foi dessa vez! A palavra correta era ${palavra}.`;
-		imgForcaHtml!.src = `${baseUrl}img1.png`;
+		imgForcaHtml!.src = `${baseUrl}/img1.png`;
 		registrarDerrota();
 		esconderElementos();
 	}
@@ -55,7 +55,7 @@ async function encontrarPalavra() : Promise<void>{
 		dica = palavraAleatoria.dica;
 		tentativas = 6;
 		letrasCorretas = [];
-		imgForcaHtml!.src = `${baseUrl}img7.png`;
+		imgForcaHtml!.src = `${baseUrl}/img7.png`;
 
 		renderizarJogo();
 		atualizarProgresso();
@@ -103,7 +103,7 @@ function verificarPalavra(tentativaPalavra: string) : void{
 		esconderElementos();
 	} else {
 		tentativasHtml!.innerText = `Não foi dessa vez! A palavra correta era ${palavra}.`;
-		imgForcaHtml!.src = "/img1.png";
+		imgForcaHtml!.src = `${baseUrl}/img1.png`;
 		registrarDerrota();
 		esconderElementos();
 	}
