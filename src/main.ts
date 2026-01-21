@@ -1,3 +1,7 @@
+import { palavras } from "./palavras";
+const baseUrl = import.meta.env.BASE_URL;
+
+
 let palavra: string = "";
 let dica: string = "";
 let tentativas: number = 6;
@@ -24,7 +28,7 @@ function renderizarJogo() : void {
 
 	if (tentativas > 0 && tentativas < 6) {
 		indiceImg = tentativas + 1;
-		imgForcaHtml!.src = `img${indiceImg}.png`;
+		imgForcaHtml!.src = `${baseUrl}img${indiceImg}.png`;
 	}
 
 	if (!palavraFormatada.includes("_")) {
@@ -37,7 +41,7 @@ function renderizarJogo() : void {
 		tentativasHtml!.textContent = `${tentativas} restantes`;
 	} else if (tentativas <= 0) {
 		tentativasHtml!.innerText = `Não foi dessa vez! A palavra correta era ${palavra}.`;
-		imgForcaHtml!.src = "img1.png";
+		imgForcaHtml!.src = `${baseUrl}img1.png`;
 		registrarDerrota();
 		esconderElementos();
 	}
@@ -45,15 +49,13 @@ function renderizarJogo() : void {
 
 async function encontrarPalavra() : Promise<void>{
 	try {
-		const response = await fetch("http://localhost:3000/palavras");
-		const palavras = await response.json();
 		const palavraAleatoria =
 			palavras[Math.floor(Math.random() * palavras.length)];
 		palavra = palavraAleatoria.palavra.toUpperCase();
 		dica = palavraAleatoria.dica;
 		tentativas = 6;
 		letrasCorretas = [];
-		imgForcaHtml!.src = "img7.png";
+		imgForcaHtml!.src = `${baseUrl}img7.png`;
 
 		renderizarJogo();
 		atualizarProgresso();
@@ -101,7 +103,7 @@ function verificarPalavra(tentativaPalavra: string) : void{
 		esconderElementos();
 	} else {
 		tentativasHtml!.innerText = `Não foi dessa vez! A palavra correta era ${palavra}.`;
-		imgForcaHtml!.src = "img1.png";
+		imgForcaHtml!.src = "/img1.png";
 		registrarDerrota();
 		esconderElementos();
 	}
